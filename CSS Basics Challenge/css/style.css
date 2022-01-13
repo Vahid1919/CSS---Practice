@@ -1,0 +1,162 @@
+:root{
+    --secondary-font: 'Be Vietnam Pro', sans-serif;
+    --primary-font: 'Suez One', sans-serif;
+}
+
+body{
+    margin: 0;
+    /* background: rgb(138, 218, 255); */
+    font-family: var(--secondary-font);
+}
+
+
+#main{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+#main-welcome{
+    /* background: rgb(0, 174, 255); */
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    animation: rainbow-blink 1s ease-in-out 0s 3 alternate none;
+    font-family: var(--primary-font);
+}
+
+h1{
+    color: currentColor;
+}
+
+h2, h3{
+    color:rgb(53, 94, 139)
+}
+
+div[class=content]{
+    grid-area: 1 / 1 / 1/ 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: justify;
+}
+
+#image-1{
+    float: right;
+    height: 300px;
+    width: 300px;
+    margin: 1em;
+    transition: all 300ms ease-in-out;
+}
+
+#image-1:hover{
+    width: 400px;
+}
+
+div[class=sidebar]{
+    background: rgb(255, 195, 116);
+    grid-area: 1 / 2 / span 1/ span 1;
+}
+
+.post{
+    margin-left: 1rem;
+}
+
+div[class=image-grid]{
+    grid-area: 2 / 1 / 2/ span 2; 
+    margin: 0;
+
+}
+
+.image-inner-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    /* gap: 3rem; */
+    margin: 3rem 6rem 0 6rem;
+    justify-content:space-between; 
+    align-content:flex-end;  
+    
+}
+
+
+img{
+    height: 250px;
+    width: 100%;
+    justify-self: center;
+    filter: opacity(90%);
+    transition: all 200ms ease;
+}
+
+img:hover{
+    height: 300px;
+    width: 471px;
+    filter: opacity(100%);
+}
+
+
+
+.post{
+    border: 2px solid black;
+    margin: 1rem;
+    padding:  0 0.5rem 0.5rem 0.5rem;
+    transition: background-color 1s ease-in;
+}
+
+div[class="post one"]{
+    animation: blink 1s ease 0s 3 normal none running;
+}
+
+div[class="post two"]{
+    animation: blink 1s ease 100ms 3 normal none running;
+}
+
+div[class="post three"]{
+    animation: blink 1s ease 200ms 3 normal none running;
+}
+div[class="post four"]{
+    animation: blink 1s ease 300ms 3 normal none running;
+}
+div[class="post five"]{
+    animation: blink 1s ease 400ms 3 normal none running;
+}
+div[class="post six"]{
+    animation: blink 1s ease 500ms 3 normal none running;
+}
+.post:hover{
+    background-color: rgb(255, 170, 131);
+}
+
+@keyframes rainbow-blink{
+    0%{
+        color: red;
+    }
+    30%{
+        color: rgb(255, 238, 0);
+    }
+    50%{
+        color: rgb(43, 255, 0);
+    }
+    70%{
+        color: rgb(0, 255, 255);
+    }
+    90%{
+        color: rgb(162, 0, 255);
+    }
+    100%{
+        color: rgb(255, 0, 119);
+    }
+    
+}
+
+@keyframes blink{
+    0%{
+        background: rgb(255, 170, 131);
+    }
+    100%{
+        background: none;
+    }
+    
+}
+
+a:hover{
+    color: red;
+}
